@@ -1,4 +1,6 @@
-<?php namespace Huddle\Zendesk\Services;
+<?php
+
+namespace Eugenelabs\Zendesk\Services;
 
 use Illuminate\Support\Facades\Log;
 
@@ -17,7 +19,7 @@ class NullService {
     public function __call($name, $arguments): static
     {
         if ($this->logCalls) {
-            Log::debug('Called Huddle Zendesk facade method: '.$name.' with:', $arguments);
+            Log::debug('Called Eugenelabs Zendesk facade method: '.$name.' with:', $arguments);
 
             return new self;
         }
@@ -28,7 +30,7 @@ class NullService {
     public function __get(string $name): static
     {
         if ($this->logCalls) {
-            Log::debug('Called Huddle Zendesk facade property: '.$name);
+            Log::debug('Called Eugenelabs Zendesk facade property: '.$name);
 
             return new self;
         }

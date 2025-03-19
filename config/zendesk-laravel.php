@@ -1,4 +1,5 @@
 <?php
+
 return [
     'driver' => env('ZENDESK_DRIVER', 'api'),
     'subdomain' => env('ZENDESK_SUBDOMAIN',null),

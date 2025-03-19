@@ -1,10 +1,10 @@
-<?php namespace Huddle\Zendesk\Facades;
+<?php
+
+namespace Eugenelabs\Zendesk\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @mixin \Zendesk\API\HttpClient
- */
+/** @mixin \Zendesk\API\HttpClient */
 class Zendesk extends Facade
 {
 

@@ -24,7 +24,7 @@ You must also install the service provider.
 // config/app.php
 'providers' => [
     ...
-    Huddle\Zendesk\Providers\ZendeskServiceProvider::class,
+    Eugenelabs\Zendesk\Providers\ZendeskServiceProvider::class,
     ...
 ];
 ```
@@ -35,7 +35,7 @@ If you want to make use of the facade you must install it as well.
 // config/app.php
 'aliases' => [
     ..
-    'Zendesk' => Huddle\Zendesk\Facades\Zendesk::class,
+    'Zendesk' => Eugenelabs\Zendesk\Facades\Zendesk::class,
 ];
 ```
 
@@ -45,7 +45,7 @@ If you want to make use of the facade you must install it as well.
 To publish the config file to `app/config/zendesk-laravel.php` run:
 
 ```bash
-php artisan vendor:publish --provider="Huddle\Zendesk\Providers\ZendeskServiceProvider"
+php artisan vendor:publish --provider="Eugenelabs\Zendesk\Providers\ZendeskServiceProvider"
 ```
 
 
@@ -99,12 +99,12 @@ Zendesk::ticket(123)->delete();
 
 ### Dependency injection
 
-If you'd prefer not to use the facade, you can skip adding the alias to `config/app.php` and instead inject `Huddle\Zendesk\Services\ZendeskService` into your class. You can then use all of the same methods on this object as you would on the facade.
+If you'd prefer not to use the facade, you can skip adding the alias to `config/app.php` and instead inject `Eugenelabs\Zendesk\Services\ZendeskService` into your class. You can then use all of the same methods on this object as you would on the facade.
 
 ```php
 <?php
 
-use Huddle\Zendesk\Services\ZendeskService;
+use Eugenelabs\Zendesk\Services\ZendeskService;
 
 class MyClass {
 

@@ -1,7 +1,9 @@
-<?php namespace Huddle\Zendesk\Providers;
+<?php
 
-use Huddle\Zendesk\Services\NullService;
-use Huddle\Zendesk\Services\ZendeskService;
+namespace Eugenelabs\Zendesk\Providers;
+
+use Eugenelabs\Zendesk\Services\NullService;
+use Eugenelabs\Zendesk\Services\ZendeskService;
 use Illuminate\Support\ServiceProvider;
 
 class ZendeskServiceProvider extends ServiceProvider {

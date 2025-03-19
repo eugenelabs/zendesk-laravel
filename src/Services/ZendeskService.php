@@ -1,4 +1,6 @@
-<?php namespace Huddle\Zendesk\Services;
+<?php
+
+namespace Eugenelabs\Zendesk\Services;
 
 use BadMethodCallException;
 use Exception;
