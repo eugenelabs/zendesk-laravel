@@ -1,5 +1,7 @@
 # Laravel Zendesk
 
+> This was forked to bump it to newer Laravel versions.
+
 This package provides integration with the Zendesk API. It supports creating tickets, retrieving and updating tickets, deleting tickets, etc.
 
 The package simply provides a `Zendesk` facade that acts as a wrapper to the [zendesk/zendesk_api_client_php](https://github.com/zendesk/zendesk_api_client_php) package.

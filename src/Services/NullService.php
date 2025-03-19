@@ -7,14 +7,14 @@ class NullService {
     /**
      * @var bool
      */
-    private $logCalls;
+    private bool $logCalls;
 
     public function __construct(bool $logCalls = false)
     {
         $this->logCalls = $logCalls;
     }
 
-    public function __call($name, $arguments)
+    public function __call($name, $arguments): static
     {
         if ($this->logCalls) {
             Log::debug('Called Huddle Zendesk facade method: '.$name.' with:', $arguments);
@@ -25,7 +25,7 @@ class NullService {
         return $this;
     }
     
-    public function __get(string $name)
+    public function __get(string $name): static
     {
         if ($this->logCalls) {
             Log::debug('Called Huddle Zendesk facade property: '.$name);

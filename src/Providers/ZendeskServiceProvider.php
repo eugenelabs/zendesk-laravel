@@ -11,14 +11,14 @@ class ZendeskServiceProvider extends ServiceProvider {
      *
      * @var bool
      */
-    protected $defer = false;
+    protected bool $defer = false;
 
     /**
      * Register the service provider and merge config.
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $packageName = 'zendesk-laravel';
         $configPath = __DIR__.'/../../config/zendesk-laravel.php';
@@ -37,7 +37,7 @@ class ZendeskServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->app->bind('zendesk', function () {
             $driver = config('zendesk-laravel.driver', 'api');

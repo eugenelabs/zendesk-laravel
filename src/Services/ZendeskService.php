@@ -1,9 +1,15 @@
 <?php namespace Huddle\Zendesk\Services;
 
-use Config, InvalidArgumentException, BadMethodCallException;
+use BadMethodCallException;
+use Exception;
+use InvalidArgumentException;
 use Zendesk\API\HttpClient;
 
 class ZendeskService {
+    protected ?string $subdomain;
+    protected ?string $username;
+    protected ?string $token;
+    protected HttpClient $client;
 
     /**
      * Get auth parameters from config, fail if any are missing.
